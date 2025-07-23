@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Fiio FT1 Pro",
+    "description": "95*86mm planar magnetic, open-back design, with interchangeable 3.5mm & 4.4mm cables.",
+    "price": 219.99,
+    "image": "images/FT1-Pro.png"
+  },
+  {
+    "name": "Hifiman Arya Unveiled",
+    "description": "New non-grid open-back design, flagship SUSVARA-level sound.",
+    "price": 1449.0,
+    "image": "images/arya-u.jpg"
+  },
+  {
+    "name": "Sennheiser HD 660S2",
+    "description": "300 Ω impedance, high-resolution soundstage, deep bass.",
+    "price": 499.95,
+    "image": "images/660s2.webp"
+  },
+  {
+    "name": "Final E5000",
+    "description": "6.4 mm dynamic driver with ceramic chamber, stainless steel shell, detachable MMCX cable.",
+    "price": 278.0,
+    "image": "images/final-e5000.jpg"
+  },
+  {
+    "name": "THIEAUDIO Origin",
+    "description": "1DD+4BA+2EST+1BC quad-driver, 20Hz-44kHz response, 102 dB sensitivity.",
+    "price": 849.0,
+    "image": "images/thieaudio-origin.png"
+  },
+  {
+    "name": "UM Melody",
+    "description": "Hybrid driver design for rich detail and clarity.",
+    "price": 1260.0,
+    "image": "images/Um-melody.webp"
+  }
+]

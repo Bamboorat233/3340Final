@@ -40,3 +40,31 @@ CREATE TABLE receipts (
     
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+--@block
+INSERT INTO products (name, description, price, image) VALUES
+  ('Fiio FT1 Pro',
+   '95*86mm planar magnetic, open-back design, with interchangeable 3.5mm & 4.4mm cables.',
+   219.99,
+   'images/FT1-Pro.png'),
+  ('Hifiman Arya Unveiled',
+   'New non-grid open-back design, flagship SUSVARA-level sound.',
+   1449.00,
+   'images/arya-u.jpg'),
+  ('Sennheiser HD 660S2',
+   '300 Ω impedance, high-resolution soundstage, deep bass.',
+   499.95,
+   'images/660s2.webp'),
+  ('Final E5000',
+   '6.4 mm dynamic driver with ceramic chamber, stainless steel shell, detachable MMCX cable.',
+   278.00,
+   'images/final-e5000.jpg'),
+  ('THIEAUDIO Origin',
+   '1DD+4BA+2EST+1BC quad-driver, 20Hz-44kHz response, 102 dB sensitivity.',
+   849.00,
+   'images/thieaudio-origin.png'),
+  ('UM Melody',
+   'Hybrid driver design for rich detail and clarity.',
+   1260.00,
+   'images/Um-melody.webp');
+
