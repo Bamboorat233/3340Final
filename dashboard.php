@@ -1,11 +1,28 @@
 <?php
 session_start();
+require_once 'db_connect.php';
 if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit;
 }
+
 $username = $_SESSION['username'];
-require_once 'db_connect.php';
+$user_id = $_SESSION['user_id'];
+
+$stmt = $pdo->prepare("
+    SELECT role
+    FROM users
+    WHERE id = :user_id
+");
+$stmt->execute(['user_id' => $user_id]);
+$user_role = $stmt->fetchColumn();
+
+// 按角色跳转
+if ($user_role === 'admin') {
+    header('Location: /admin_dashboard.php');
+}
+
+
 
 // 查询该用户的所有 receipts
 $stmt = $pdo->prepare("SELECT * FROM receipts WHERE user_id = ? ORDER BY issued_at DESC");
@@ -21,46 +38,6 @@ $receipts = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
-  <style>
-    .dashboard-box {
-      width: 500px;
-      margin: 120px auto 40px;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      text-align: center;
-      font-family: sans-serif;
-    }
-    .receipt-box {
-      width: 500px;
-      margin: 20px auto;
-      background: rgba(250, 250, 250, 0.85);
-      border-left: 6px solid #5a3210;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-      font-family: sans-serif;
-    }
-    .receipt-box h4 {
-      margin-bottom: 10px;
-    }
-    .receipt-box pre {
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-size: 14px;
-    }
-    .dashboard-box a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 24px;
-      background-color: rgba(85, 41, 5, 0.8);
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
   <!-- Menu button -->

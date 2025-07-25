@@ -1,4 +1,3 @@
-
 --@block
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -67,4 +66,7 @@ INSERT INTO products (name, description, price, image) VALUES
    'Hybrid driver design for rich detail and clarity.',
    1260.00,
    'images/Um-melody.webp');
+
+--@block
+UPDATE users SET role = 'admin' WHERE username = 'admin01';
 
