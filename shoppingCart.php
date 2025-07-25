@@ -28,6 +28,14 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // echo '</pre>';
 // exit;
 
+// 清空购物车
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['clear_cart'])) {
+    $stmt = $pdo->prepare("DELETE FROM cart_items WHERE user_id = :uid");
+    $stmt->execute(['uid' => $_SESSION['user_id']]);
+    header("Location: shoppingCart.php"); // 避免刷新再次触发
+    exit;
+}
+
 
 // 计算总价
 $total = 0;
@@ -63,7 +71,7 @@ foreach ($items as $it) {
                      alt="<?php echo htmlspecialchars($it['name']); ?>" 
                      style="height:40px;vertical-align:middle;margin-right:8px;">
                 <strong><?php echo htmlspecialchars($it['name']); ?></strong>
-                × <?php echo $it['quantity']; ?>
+                X <?php echo $it['quantity']; ?>
                 — $<?php echo number_format($it['price'] * $it['quantity'], 2); ?>
               </li>
               <?php endforeach; ?>
@@ -76,6 +84,9 @@ foreach ($items as $it) {
           <div class="cart-actions">
             <form action="checkout.php" method="POST">
               <button type="submit" class="checkout-btn">Checkout</button>
+            </form>
+            <form method="POST" style="display: inline;">
+                <button type="submit" name="clear_cart" class="checkout-btn" onclick="return confirm('Are you sure you want to clear your cart?')">Clear Cart</button>
             </form>
           </div>
         <?php endif; ?>

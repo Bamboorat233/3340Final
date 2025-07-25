@@ -1,7 +1,20 @@
 <?php
 // admin_dashboard.php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit;
+}
 
 require_once 'db_connect.php';
+
+$username = $_SESSION['username'];
+
+// echo '<pre>';
+// echo 'Using DB: ' . $pdo->query("SELECT DATABASE()")->fetchColumn() . "\n";
+// echo 'UserName: '; var_dump($username);
+// echo '</pre>';
+// exit;
 
 // ====== 获取核心统计数据 ======
 $totalUsers  = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
@@ -39,7 +52,8 @@ $recentOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <div class="nav">
-        <strong>你好，<?php echo htmlspecialchars($_SESSION['user']['username']); ?>（管理员）</strong>
+        <strong>你好，<?php echo htmlspecialchars($username); ?>（管理员）</strong>
+        | <a href="/admin_dashboard.php">首页</a>
         | <a href="/products_manage.php">商品管理</a>
         | <a href="/orders_manage.php">订单管理</a>
         | <a href="/users_manage.php">用户管理</a>
