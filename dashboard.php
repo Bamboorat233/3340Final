@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once 'db_connect.php';
+
+// Redirect to login page if user is not logged in
 if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit;
@@ -9,6 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 $username = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 
+// Fetch the user's role
 $stmt = $pdo->prepare("
     SELECT role
     FROM users
@@ -17,16 +20,15 @@ $stmt = $pdo->prepare("
 $stmt->execute(['user_id' => $user_id]);
 $user_role = $stmt->fetchColumn();
 
-// 按角色跳转
+// Redirect based on role
 if ($user_role === 'admin') {
     header('Location: /admin_dashboard.php');
+    exit;
 }
 
-
-
-// 查询该用户的所有 receipts
+// Fetch all receipts for this user, most recent first
 $stmt = $pdo->prepare("SELECT * FROM receipts WHERE user_id = ? ORDER BY issued_at DESC");
-$stmt->execute([$_SESSION['user_id']]);
+$stmt->execute([$user_id]);
 $receipts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -40,15 +42,17 @@ $receipts = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  <!-- Menu button -->
-    <?php include 'siderTopBar.php'; ?>
+  <!-- Navigation bar / sidebar -->
+  <?php include 'siderTopBar.php'; ?>
 
+  <!-- Welcome message box -->
   <div class="dashboard-box">
     <h2>Welcome, <?php echo htmlspecialchars($username); ?>!</h2>
     <p>You have successfully logged in to LinkMusic.</p>
     <a href="logout.php">Logout</a>
   </div>
 
+  <!-- User receipts listing -->
   <?php foreach ($receipts as $receipt): ?>
     <div class="receipt-box">
       <h4>Receipt #<?php echo $receipt['id']; ?> — <?php echo $receipt['issued_at']; ?></h4>

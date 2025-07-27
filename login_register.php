@@ -1,32 +1,32 @@
 <?php
 session_start();
-require_once 'db_connect.php'; // 使用你已配置好的数据库连接
+require_once 'db_connect.php'; // Use your configured DB connection
 
-// 获取表单数据
-$action = $_POST['action'] ?? '';
+// Get form data from POST
+$action   = $_POST['action'] ?? '';
 $username = trim($_POST['username'] ?? '');
 $password = trim($_POST['password'] ?? '');
-$email = trim($_POST['email'] ?? '');
+$email    = trim($_POST['email'] ?? '');
 
-// 基础校验
+// Basic input validation
 if ($username === '' || $password === '') {
     exit('Username and password are required.');
 }
 
+// === Registration logic ===
 if ($action === 'register') {
-    // 注册逻辑
     if ($email === '') {
         exit('Email is required for registration.');
     }
 
-    // 检查用户名或邮箱是否已存在
+    // Check if username or email already exists
     $check = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
     $check->execute([$username, $email]);
     if ($check->rowCount() > 0) {
         exit('Username or email already exists.');
     }
 
-    // 加密密码并插入
+    // Hash password and insert new user
     $hashed = password_hash($password, PASSWORD_DEFAULT);
     $insert = $pdo->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
     $insert->execute([$username, $hashed, $email]);
@@ -35,17 +35,19 @@ if ($action === 'register') {
     exit;
 }
 
+// === Login logic ===
 if ($action === 'login') {
-    // 登录逻辑
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
     $stmt->execute([$username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    // Verify user and password
     if ($user && password_verify($password, $user['password'])) {
+        // Store session information
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
 
-        header("Location: index.php"); // 登录成功跳转主页
+        header("Location: index.php"); // Redirect to homepage after login
         exit;
     } else {
         echo "Login failed. Invalid username or password.";

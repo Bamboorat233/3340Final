@@ -9,22 +9,25 @@ require_once 'db_connect.php';
     <title>LinkMusic — Over‑Ear Headphones</title>
     <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- headphone.html – Over‑Ear Headphones Page Logic -->
+
+    <!-- Over-Ear Headphones Page Scripts -->
     <script defer src="js/inear.js"></script>
     <script defer src="js/cart.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
+    <!-- Navigation bar / Sidebar -->
     <?php include 'siderTopBar.php'; ?>
 
     <!-- Main slider section -->
     <main>
       <div class="slider">
+        <!-- Previous button -->
         <button id="prevBtn" class="slider-btn left">
           <img src="images/chevron-left-64.webp" alt="Previous" />
         </button>
 
-        <!-- Slide: Fiio FT1 Pro -->
+        <!-- Product Slide: Fiio FT1 Pro -->
         <div class="slide active">
           <div class="floating-box">
             <h2>Fiio FT1 Pro</h2>
@@ -46,7 +49,7 @@ require_once 'db_connect.php';
           </div>
         </div>
 
-        <!-- Slide: Hifiman Arya Unveiled -->
+        <!-- Product Slide: Hifiman Arya Unveiled -->
         <div class="slide">
           <div class="floating-box">
             <h2>Hifiman Arya Unveiled</h2>
@@ -65,7 +68,7 @@ require_once 'db_connect.php';
           </div>
         </div>
 
-        <!-- Slide: Sennheiser HD 660S2 -->
+        <!-- Product Slide: Sennheiser HD 660S2 -->
         <div class="slide">
           <div class="floating-box">
             <h2>Sennheiser HD 660S2</h2>
@@ -84,13 +87,14 @@ require_once 'db_connect.php';
           </div>
         </div>
 
+        <!-- Next button -->
         <button id="nextBtn" class="slider-btn right">
           <img src="images/chevron-right-64.webp" alt="Next" />
         </button>
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer section -->
     <footer>
       <div class="footer-content">
         <div class="footer-school">
@@ -107,7 +111,7 @@ require_once 'db_connect.php';
       </div>
     </footer>
 
-    <!-- Global script -->
+    <!-- Global JS -->
     <script src="js/main.js"></script>
   </body>
 </html>
