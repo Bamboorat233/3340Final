@@ -34,5 +34,35 @@
     "description": "Hybrid driver design for rich detail and clarity.",
     "price": 1260.0,
     "image": "images/Um-melody.webp"
+  },
+  {
+    "name": "MOONDROP Silver pill",
+    "description": "Three-Layer Coaxial Braided Oil-Immersed Oxygen-Free Copper Silver-Plated Upgrade Cable",
+    "price": 780.44,
+    "image": "images/MOONDROP Silver pill.png"
+  },
+  {
+    "name": "Moondrop Atami",
+    "description": "Litz-Structure Single Crystal Copper + Special Silver Solder High-Quality Braided Upgrade Cable",
+    "price": 169.08,
+    "image": "images/Moondrop Atami.png"
+  },
+  {
+    "name": "TWISTURA CHENXI",
+    "description": "Headphone Upgrade Cable",
+    "price": 141.78,
+    "image": "images/TWISTURA CHENXI.png"
+  },
+  {
+    "name": "Tripowin Aurora",
+    "description": "HiFi Replacement Cable for Wired Earbuds",
+    "price": 78.03,
+    "image": "images/Tripowin Aurora.png"
+  },
+  {
+    "name": "Kiwi Ears Terras",
+    "description": "4N OCC Audiophile Cable",
+    "price": 59.82,
+    "image": "images/Kiwi Ears Terras.png"
   }
 ]

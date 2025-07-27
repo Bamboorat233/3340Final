@@ -68,5 +68,18 @@ INSERT INTO products (name, description, price, image) VALUES
    'images/Um-melody.webp');
 
 --@block
-UPDATE users SET role = 'admin' WHERE username = 'admin01';
+INSERT INTO products (name, description, price, image) VALUES
+('MOONDROP Silver pill', 'Three-Layer Coaxial Braided Oil-Immersed Oxygen-Free Copper Silver-Plated Upgrade Cable', 780.44, 'images/MOONDROP Silver pill.png'),
+('Moondrop Atami', 'Litz-Structure Single Crystal Copper + Special Silver Solder High-Quality Braided Upgrade Cable', 169.08, 'images/Moondrop Atami.png'),
+('TWISTURA CHENXI', 'Headphone Upgrade Cable', 141.78, 'images/TWISTURA CHENXI.png'),
+('Tripowin Aurora', 'HiFi Replacement Cable for Wired Earbuds', 78.03, 'images/Tripowin Aurora.png'),
+('Kiwi Ears Terras', '4N OCC Audiophile Cable', 59.82, 'images/Kiwi Ears Terras.png');
 
+
+--@block
+INSERT INTO products (name, description, price, image) VALUES
+('TRN BT1', '1DD+1BA Hybrid Driver TWS True Wireless Bluetooth 5.0 Earphones', 39.01, 'images/TRN BT1.png'),
+('KINERA YH623', 'Kinera YH623 adopts the new driver and active noise-cancelling technology to achieve a HiFi class stereo sound.', 89.75, 'images/KINERA YH623.png'),
+('Moondrop PILL', 'Built-in AI ENC High-quality Ear-clip Earbuds', 65.02, 'images/Moondrop PILL.png'),
+('KZ Carol Pro', 'Wireless Earbuds, Six-Microphone Hybrid Noise Cancellation, LDAC High-Resolution Wireless Audio', 42.91, 'images/KZ Carol Pro.png'),
+('Moondrop Pavane', '13.5mm Dynamic Driver Flagship Earbuds', 494.27, 'images/Moondrop Pavane.png');

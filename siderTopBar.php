@@ -20,6 +20,8 @@ if (session_status() === PHP_SESSION_NONE) {
       <li><a href="index.php">Home</a></li>
       <li><a href="inear.php">In-Ear Headphones</a></li>
       <li><a href="headphone.php">Over-Ear Headphones</a></li>
+      <li><a href="earbuds.php">TWS Earbuds</a></li>
+      <li><a href="audioCable.php">Audio Cable</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="shoppingCart.php">Shopping Cart</a></li>
       <li><a href="citation.html">References</a></li>
