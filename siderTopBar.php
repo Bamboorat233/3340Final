@@ -25,6 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
       <li><a href="about.html">About Us</a></li>
       <li><a href="shoppingCart.php">Shopping Cart</a></li>
       <li><a href="citation.html">References</a></li>
+      <li><a href="wiki.php">Wiki</a></li>
     </ul>
   </nav>
 </aside>
