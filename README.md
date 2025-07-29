@@ -1,28 +1,22 @@
-Installation
-Clone the Repository:
+# LinkMusic HIFI (LMHF)
 
-bash
+A modern HiFi-themed e-commerce web application built with PHP and MySQL. It supports user registration, login, product browsing, shopping cart functionality, and receipt tracking.
+
+---
+
+## 🛠 Features
+
+- User login, registration, and role management (`admin`, `user`)
+- Add to cart, remove item, and checkout functionality
+- Admin product management
+- Receipt and purchase history tracking
+- Modern translucent UI layout
+
+---
+
+## 📁 Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/<your-username>/LMHF.git
-Upload to Server:
-
-Upload the files to your hosting server (e.g., public_html/LMHF/).
-
-Database Setup:
-
-Import the SQL schema (tables for users, products, and receipts).
-
-Insert sample data using the provided SQL scripts.
-
-Configure Database Connection:
-
-Edit db_connect.php:
-
-php
-$host = 'localhost';
-$dbname = 'your_database_name';
-$username = 'your_db_user';
-$password = 'your_db_password';
-Access the Website:
-
-Visit https://yourdomain/LMHF/.
-
