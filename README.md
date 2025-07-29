@@ -1,29 +1,28 @@
-##Installation
-Clone the Repository:
-bash
-```
-git clone https://github.com/<your-username>/LMHF.git
-```
+## Prerequisites
 
-##Upload to Server:
-Upload the files to your hosting server (e.g., public_html/LMHF/).
+* **PHP** ≥ 7.3.4 (PDO extension enabled)
+* **MySQL** ≥ 8.0.12
+* A web server (Apache/Nginx) with HTTPS enabled
 
-##Database Setup:
-Import the SQL schema (tables for users, products, and receipts).
-Insert sample data using the provided SQL scripts.
-Configure Database Connection:
+## Installation
 
-##Edit db_connect.php:
-php
-```
-$host = 'localhost';
-$dbname = 'your_database_name';
+### Configure the application
+
+Edit `db_connect.php` and set your credentials:
+
+```php
+<?php
+$host     = 'localhost';
+$dbname   = 'lmhf';
 $username = 'your_db_user';
 $password = 'your_db_password';
-Access the Website:
 ```
 
-##visit your website
+## Access the site
+
+Open your browser and navigate to:
+
 ```
-Visit https://yourdomain/LMHF/.
+https://yourdomain/LMHF/
 ```
+
