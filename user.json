@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "username": "SliverPh",
+    "password": "$2y$10$wm/FpPeKFELSrLywsCIP1umAVAc8PpiMVre67caRrju4N3kn0twpW",
+    "email": "bamboorat233@gmail.com",
+    "role": "user",
+    "created_at": "2025-07-22 17:08:38"
+  },
+  {
+    "id": 5,
+    "username": "admin01",
+    "password": "$2y$10$XXqZAl66W/xYh7ztONhGiuKlw1FB4/Dmt9XgxbDk0I4QlwbQAAxJW",
+    "email": "Fabianli2002@outlook.com",
+    "role": "admin",
+    "created_at": "2025-07-25 11:12:16"
+  }
+]

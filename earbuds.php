@@ -108,4 +108,32 @@ require_once 'db_connect.php';
           </div>
         </div>
 
-        <!-- Navigation:
+ <!-- Navigation buttons -->
+        <button id="nextBtn" class="slider-btn right">
+          <img src="images/chevron-right-64.webp" alt="Next" />
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-school">
+          <img
+            src="images/universityLogoNew_uni-logo-windsor.png"
+            alt="University of Windsor Logo"
+            class="univ-logo"
+          />
+          <span class="univ-name">University of Windsor</span>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:likerui@uwindsor.ca">likerui@uwindsor.ca</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

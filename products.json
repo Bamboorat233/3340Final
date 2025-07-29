@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Fiio FT1 Pro",
+    "description": "95*86mm planar magnetic, open-back design, with interchangeable 3.5mm & 4.4mm cables.",
+    "price": "219.99",
+    "image": "images/FT1-Pro.png",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 2,
+    "name": "Hifiman Arya Unveiled",
+    "description": "New non-grid open-back design, flagship SUSVARA-level sound.",
+    "price": "1449.00",
+    "image": "images/arya-u.jpg",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 3,
+    "name": "Sennheiser HD 660S2",
+    "description": "300 Ω impedance, high-resolution soundstage, deep bass.",
+    "price": "499.95",
+    "image": "images/660s2.webp",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 4,
+    "name": "Final E5000",
+    "description": "6.4 mm dynamic driver with ceramic chamber, stainless steel shell, detachable MMCX cable.",
+    "price": "278.00",
+    "image": "images/final-e5000.jpg",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 5,
+    "name": "THIEAUDIO Origin",
+    "description": "1DD+4BA+2EST+1BC quad-driver, 20Hz-44kHz response, 102 dB sensitivity.",
+    "price": "849.00",
+    "image": "images/thieaudio-origin.png",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 6,
+    "name": "UM Melody",
+    "description": "Hybrid driver design for rich detail and clarity.",
+    "price": "1260.00",
+    "image": "images/Um-melody.webp",
+    "created_at": "2025-07-23 17:33:36"
+  },
+  {
+    "id": 7,
+    "name": "MOONDROP Silver pill",
+    "description": "Three-Layer Coaxial Braided Oil-Immersed Oxygen-Free Copper Silver-Plated Upgrade Cable",
+    "price": "780.44",
+    "image": "images/MOONDROP Silver pill.png",
+    "created_at": "2025-07-27 09:10:24"
+  },
+  {
+    "id": 8,
+    "name": "Moondrop Atami",
+    "description": "Litz-Structure Single Crystal Copper + Special Silver Solder High-Quality Braided Upgrade Cable",
+    "price": "169.08",
+    "image": "images/Moondrop Atami.png",
+    "created_at": "2025-07-27 09:10:24"
+  },
+  {
+    "id": 9,
+    "name": "TWISTURA CHENXI",
+    "description": "Headphone Upgrade Cable",
+    "price": "141.78",
+    "image": "images/TWISTURA CHENXI.png",
+    "created_at": "2025-07-27 09:10:24"
+  },
+  {
+    "id": 10,
+    "name": "Tripowin Aurora",
+    "description": "HiFi Replacement Cable for Wired Earbuds",
+    "price": "78.03",
+    "image": "images/Tripowin Aurora.png",
+    "created_at": "2025-07-27 09:10:24"
+  },
+  {
+    "id": 11,
+    "name": "Kiwi Ears Terras",
+    "description": "4N OCC Audiophile Cable",
+    "price": "59.82",
+    "image": "images/Kiwi Ears Terras.png",
+    "created_at": "2025-07-27 09:10:24"
+  },
+  {
+    "id": 12,
+    "name": "TRN BT1",
+    "description": "1DD+1BA Hybrid Driver TWS True Wireless Bluetooth 5.0 Earphones",
+    "price": "39.01",
+    "image": "images/TRN BT1.png",
+    "created_at": "2025-07-27 15:42:12"
+  },
+  {
+    "id": 13,
+    "name": "KINERA YH623",
+    "description": "Kinera YH623 adopts the new driver and active noise-cancelling technology to achieve a HiFi class stereo sound.",
+    "price": "89.75",
+    "image": "images/KINERA YH623.png",
+    "created_at": "2025-07-27 15:42:12"
+  },
+  {
+    "id": 14,
+    "name": "Moondrop PILL",
+    "description": "Built-in AI ENC High-quality Ear-clip Earbuds",
+    "price": "65.02",
+    "image": "images/Moondrop PILL.png",
+    "created_at": "2025-07-27 15:42:12"
+  },
+  {
+    "id": 15,
+    "name": "KZ Carol Pro",
+    "description": "Wireless Earbuds, Six-Microphone Hybrid Noise Cancellation, LDAC High-Resolution Wireless Audio",
+    "price": "42.91",
+    "image": "images/KZ Carol Pro.png",
+    "created_at": "2025-07-27 15:42:12"
+  },
+  {
+    "id": 16,
+    "name": "Moondrop Pavane",
+    "description": "13.5mm Dynamic Driver Flagship Earbuds",
+    "price": "494.27",
+    "image": "images/Moondrop Pavane.png",
+    "created_at": "2025-07-27 15:42:12"
+  }
+]
